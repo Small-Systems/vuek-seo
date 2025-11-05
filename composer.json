@@ -2,7 +2,6 @@
   "name": "small-systems/vuek-seo",
   "description": "SEO tools for Kriby and Vue+Vite ",
   "type": "kirby-plugin",
-  "version": "1.0.0",
   "license": "MIT",
   "authors": [
     {
