@@ -1,0 +1,41 @@
+label: Search and Share (SEO)
+columns:
+  meta:
+    width: 1/2
+    fields:
+      metaTitle:
+        type: text
+        label: Fallback Website Subtitle
+      metaDescription:
+        type: textarea
+        label: Fallback Website Description
+        buttons: false
+      favicon:
+        label: Website Icon
+        type: files
+        multiple: false
+        required: true
+        query: site.images.template('favicon')
+        uploads:
+          template: favicon
+      metaImage:
+        label: Fallback Website Image
+        extends: fields/meta-image
+        query: site.images.template('image')
+  preview:
+    width: 1/2
+    fields:
+      seo-preview:
+        type: seo-preview
+        label: Preview
+        siteTitle: "{{ site.title.value }}"
+        siteUrl: "{{ kirby.url }}"
+        faviconUrl: "{{ site.favicon.toFile().url }}"
+        titleContentKey: metaTitle
+        defaultTitle: "{{ site.title }}"
+        descriptionContentKey: metaDescription
+        defaultDescription: "{{ page.writer.inline.value }} {{ site.metaDescription.value }}"
+        imageContentKey: cover
+        overrideImage: "{{ page.metaImage }}"
+        siteImage: "{{ site.metaImage }}"
+

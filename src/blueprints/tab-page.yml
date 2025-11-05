@@ -1,0 +1,31 @@
+label: Search and Share (SEO)
+columns:
+  meta:
+    width: 1/2
+    fields:
+      metaTitle:
+        type: text
+        label: Override Meta Title
+      metaDescription:
+        type: textarea
+        label: Override Meta Description
+        buttons: false
+      metaImage:
+        extends: fields/meta-image
+        label: Override Meta Image
+  preview:
+    width: 1/2
+    fields:
+      seo-preview:
+        type: seo-preview
+        label: Preview
+        siteTitle: "{{ site.title.value }}"
+        siteUrl: "{{ kirby.url }}"
+        faviconUrl: "{{ site.favicon.toFile().url }}"
+        titleContentKey: metaTitle
+        defaultTitle: "{{ page.getMetaTitle }}"
+        descriptionContentKey: metaDescription
+        defaultDescription: "{{ page.writer.inline.value }} {{ site.metaDescription.value }}"
+        imageContentKey: cover
+        overrideImage: "{{ page.metaImage }}"
+        siteImage: "{{ site.metaImage }}"
