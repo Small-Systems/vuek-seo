@@ -1,17 +1,17 @@
-label: Search and Share (SEO)
+label: small-systems.vuek-seo.seo-tab.label
 columns:
   meta:
     width: 1/2
     fields:
       metaTitle:
         type: text
-        label: Fallback Website Subtitle
+        label: small-systems.vuek-seo.seo-preview.fallback-website-subtitle
       metaDescription:
         type: textarea
-        label: Fallback Website Description
+        label: small-systems.vuek-seo.seo-preview.fallback-website-description
         buttons: false
       favicon:
-        label: Website Icon
+        label: small-systems.vuek-seo.seo-preview.website-icon
         type: files
         multiple: false
         required: true
@@ -19,15 +19,15 @@ columns:
         uploads:
           template: favicon
       metaImage:
-        label: Fallback Website Image
-        extends: fields/meta-image
+        label: small-systems.vuek-seo.seo-preview.website-image
+        extends: vuek-seo/meta-image
         query: site.images.template('image')
   preview:
     width: 1/2
     fields:
       seo-preview:
         type: seo-preview
-        label: Preview
+        label: small-systems.vuek-seo.seo-preview.label
         siteTitle: "{{ site.title.value }}"
         siteUrl: "{{ kirby.url }}"
         faviconUrl: "{{ site.favicon.toFile().url }}"
@@ -38,4 +38,3 @@ columns:
         imageContentKey: cover
         overrideImage: "{{ page.metaImage }}"
         siteImage: "{{ site.metaImage }}"
-

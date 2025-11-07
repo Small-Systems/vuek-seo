@@ -1,24 +1,24 @@
-label: Search and Share (SEO)
+label: small-systems.vuek-seo.seo-tab.label
 columns:
   meta:
     width: 1/2
     fields:
       metaTitle:
         type: text
-        label: Override Meta Title
+        label: small-systems.vuek-seo.seo-preview.override-meta-title
       metaDescription:
         type: textarea
-        label: Override Meta Description
+        label: small-systems.vuek-seo.seo-preview.override-meta-description
         buttons: false
       metaImage:
-        extends: fields/meta-image
-        label: Override Meta Image
+        extends: vuek-seo/meta-image
+        label: small-systems.vuek-seo.seo-preview.override-meta-image
   preview:
     width: 1/2
     fields:
       seo-preview:
         type: seo-preview
-        label: Preview
+        label: small-systems.vuek-seo.seo-preview.label
         siteTitle: "{{ site.title.value }}"
         siteUrl: "{{ kirby.url }}"
         faviconUrl: "{{ site.favicon.toFile().url }}"

@@ -1,0 +1,9 @@
+title: Favicon
+accept:
+  extension: jpg, png, jpeg, gif
+  maxsize: 10000
+image:
+  cover: true
+  back: white
+options:
+  preview: false

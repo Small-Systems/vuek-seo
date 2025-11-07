@@ -1,0 +1,11 @@
+type: files
+multiple: false
+translate: false
+image:
+  cover: true
+  ratio: 16/9
+layout: cards
+size: full
+query: page.images.template('image')
+uploads:
+  template: image
