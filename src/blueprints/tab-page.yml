@@ -8,6 +8,7 @@ columns:
         label: small-systems.vuek-seo.seo-preview.override-meta-title
       metaDescription:
         type: textarea
+        maxlength: 160
         label: small-systems.vuek-seo.seo-preview.override-meta-description
         buttons: false
       metaImage:

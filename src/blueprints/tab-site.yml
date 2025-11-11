@@ -8,6 +8,7 @@ columns:
         label: small-systems.vuek-seo.seo-preview.fallback-website-subtitle
       metaDescription:
         type: textarea
+        maxlength: 160
         label: small-systems.vuek-seo.seo-preview.fallback-website-description
         buttons: false
       favicon:
